@@ -32,5 +32,4 @@ Ao executar o script, ele se conectará aos servidores da SEFAZ, enviará as req
 2. Configure o caminho do certificado digital e a senha no script.
 3. Ajuste os parâmetros de inutilização conforme necessário.
 4. Execute o script para iniciar o processo de inutilização.
-
 Obs: Em produção.
