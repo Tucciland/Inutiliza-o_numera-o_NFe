@@ -18,6 +18,7 @@ range = 500  # Intervalo de números para inutilização em cada iteração
 i = 1  # Contador de iterações
 
 # Dados da inutilização
+max_range = 4734920
 cnpj = '00000000000000'  # CNPJ da empresa
 numero_inicial = 1380  # Primeiro número da sequência a ser inutilizada
 numero_final = numero_inicial + range  # Último número da sequência a ser inutilizada
@@ -26,7 +27,12 @@ ano = 2024  # Ano da inutilização
 serie = '1'  # Série da NFe
 
 # Loop para realizar inutilizações até que o número final seja atingido
-while numero_final < 4734920:
+while numero_final < max_range:
+
+    #Condicional para não deixar o ultimo numero a ser inutilizado ultrapassar o valor maximo da inutilização 
+    if numero_final > max_range:
+        numero_final = max_range
+    
     # Inicializa a comunicação com a SEFAZ usando as configurações fornecidas
     comunicacao = ComunicacaoSefaz(uf, certificado, senha_certificado, homologacao)
 
